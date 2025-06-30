@@ -1,0 +1,19 @@
+:root{
+    --background-color1: #670076;
+    --background-color2: #660076af;
+    --text-color2: #670076;
+    --text-color3: black;
+    --text-color1:white;
+}
+.bg-color{
+    background-color: var(--background-color1);
+    color: var(--text-color1);
+}
+.bg-color:hover{
+    background-color: var(--background-color2);
+    color: var(--text-color1);
+}
+.text-color{
+        color: var(--text-color2);
+
+}
