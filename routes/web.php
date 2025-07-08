@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\Auth\LoginContoller;
 use App\Http\Controllers\Auth\RegisterContoller;
 
@@ -25,4 +26,6 @@ Route::post('register/submit',[RegisterContoller::class,'store'])->name('auth.re
 Route::group(['middleware' => 'auth'],function(){
     Route::get('/home',[HomeController::class,'index'])->name('index');
     Route::get('/logout',[LoginContoller::class,'logout'])->name('auth.logout');
+    Route::post('/messegEnter',[ChatController::class,'store'])->name('messegEnter');
+    Route::get('/chatOpen/{id}', [ChatController::class, 'chatOpen'])->name('chatopen');
 });
